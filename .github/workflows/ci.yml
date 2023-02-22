@@ -11,7 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '2.7'
       - name: Clone inlets.dev
         run: |
           git clone --depth=1 https://github.com/inlets/inlets.dev
