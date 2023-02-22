@@ -24,13 +24,12 @@ jobs:
           ruby-version: '2.7'
       - name: Clone inlets.dev
         run: |
-          git clone --depth=1 https://github.com/inlets/inlets.dev
+          git clone --depth=1 https://github.com/inlets/inlets.dev .
       - name: Add bundler
         run: |
           sudo gem install bundler:2.2.13
-      - name: Installd deps
+      - name: Install deps
         run: |
-          cd inlets.dev
           bundle install && yarn install
       - name: Build site
         run: |
