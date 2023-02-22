@@ -30,4 +30,5 @@ jobs:
           git clone --depth=1 https://github.com/inlets/inlets.dev
       - name: Build
         run: |
-          bundle exec jekyll build -d _site
+          bundle install && yarn install
+          JEKYLL_ENV=production bundle exec jekyll build -d docs
