@@ -19,12 +19,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          repository: https://github.com/inlets/inlets.dev
+          depth: 1
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: '2.7'
-      - name: Clone inlets.dev
-        run: |
-          git clone --depth=1 https://github.com/inlets/inlets.dev .
       - name: Add bundler
         run: |
           sudo gem install bundler:2.2.13
