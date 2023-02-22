@@ -18,5 +18,6 @@ jobs:
       - name: Build
         run: |
           sudo gem install bundler:2.2.13
+          cd inlets.dev
           bundle install && yarn install
           JEKYLL_ENV=production bundle exec jekyll build -d docs
